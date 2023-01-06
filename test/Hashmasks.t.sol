@@ -8,7 +8,7 @@ import {console2} from "forge-std/console2.sol";
 import {Utilities} from "./Utilities.sol";
 import {Hashmasks} from "../src/Hashmasks.sol";
 
-contract Exploit is Ownable {
+contract Exploit is Ownable, IERC721Receiver {
     Hashmasks private hashmasks;
     uint256 private maxCalls;
     uint256 private callIx;
